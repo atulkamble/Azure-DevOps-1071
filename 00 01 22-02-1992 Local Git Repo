@@ -1,0 +1,202 @@
+# 🐧 Git & Python Setup + First Project (Linux – Ubuntu)
+
+This document explains step-by-step what each command does while setting up **Git**, **Python**, and creating your first local Git project.
+
+---
+
+## 1️⃣ System Preparation
+
+```bash
+clear
+uname
+sudo apt update -y
+clear
+```
+
+### 🔹 Explanation
+
+* `clear` → Clears terminal screen
+* `uname` → Shows system/kernel information
+* `sudo apt update -y` → Updates package list from repositories
+* `-y` → Automatically confirms installation
+
+---
+
+## 2️⃣ Git Installation & Verification
+
+```bash
+git --version
+sudo apt remove git -y
+git --version
+sudo apt install git -y
+git --version
+```
+
+### 🔹 Explanation
+
+* `git --version` → Check if Git is installed
+* `sudo apt remove git -y` → Remove existing Git version
+* `sudo apt install git -y` → Install Git
+* Final `git --version` → Confirm successful installation
+
+---
+
+## 3️⃣ Configure Git User Details
+
+```bash
+git config --global user.name "Atul Kamble"
+git config --global user.email "atul_kamble@hotmail.com"
+git config --list
+```
+
+### 🔹 Explanation
+
+* Sets global Git username
+* Sets global Git email
+* `git config --list` → Verifies configuration
+
+📌 These details appear in commit history.
+
+---
+
+## 4️⃣ Create a New Git Project
+
+```bash
+mkdir project
+ls
+cd project
+git init
+ls
+ls -la
+history
+git status
+```
+
+### 🔹 Explanation
+
+* `mkdir project` → Create new directory
+* `cd project` → Navigate into directory
+* `git init` → Initialize empty Git repository
+* `ls -la` → Shows hidden `.git` folder
+* `git status` → Shows repository status
+
+---
+
+## 5️⃣ Install Python
+
+```bash
+sudo apt install python -y
+sudo apt install python-is-python3 -y
+python --version
+```
+
+### 🔹 Explanation
+
+* Installs Python
+* `python-is-python3` ensures `python` command maps to Python 3
+* `python --version` → Verify installation
+
+---
+
+## 6️⃣ Create & Run Python Script
+
+```bash
+touch helloworld.py
+ls
+nano helloworld.py
+cat helloworld.py
+python helloworld.py
+```
+
+### 🔹 Explanation
+
+* `touch helloworld.py` → Create empty file
+* `nano helloworld.py` → Open editor
+* Example code inside file:
+
+```python
+print("Hello, World!")
+```
+
+* `cat helloworld.py` → Display file contents
+* `python helloworld.py` → Run script
+
+---
+
+## 7️⃣ Git Add & Commit (First Version)
+
+```bash
+git status
+git add helloworld.py
+git status
+git commit -m "added helloworld"
+git log
+```
+
+### 🔹 Explanation
+
+* `git status` → Shows untracked file
+* `git add helloworld.py` → Stage file
+* `git commit -m "added helloworld"` → Save snapshot
+* `git log` → View commit history
+
+---
+
+## 8️⃣ Modify Code & Commit Again
+
+```bash
+nano helloworld.py
+git status
+git add helloworld.py
+git commit -m "modified code"
+git log
+```
+
+### 🔹 Explanation
+
+* Modify file (example):
+
+```python
+print("Hello, DevOps World!")
+```
+
+* Add updated file
+* Commit changes
+* View commit history
+
+---
+
+## 🔎 Useful Git Commands Used
+
+| Command      | Purpose               |
+| ------------ | --------------------- |
+| `git init`   | Initialize repository |
+| `git status` | Show current state    |
+| `git add`    | Stage changes         |
+| `git commit` | Save snapshot         |
+| `git log`    | View commit history   |
+| `history`    | View command history  |
+
+---
+
+## ✅ Final Outcome
+
+You have successfully:
+
+✔ Installed Git
+✔ Configured Git user
+✔ Installed Python
+✔ Created Python file
+✔ Initialized Git repository
+✔ Performed multiple commits
+✔ Viewed Git history
+
+---
+
+# 🚀 Beginner DevOps Workflow Completed
+
+This exercise demonstrates the **basic development lifecycle**:
+
+> Write Code → Run Code → Track Changes → Commit → Modify → Commit Again
+
+---
